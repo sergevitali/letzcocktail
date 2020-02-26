@@ -3,6 +3,7 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const ejs = require('ejs');
 const axios = require('axios').default;
+const port = process.env.PORT || 3000;
 
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
@@ -213,6 +214,6 @@ function handleError(err){
 }
 
 
-app.listen(3000, function(){
+app.listen(port, function(){
     console.log('Server is running on port 3000');
 });
