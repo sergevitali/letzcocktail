@@ -9,7 +9,7 @@ body{
     margin-bottom:160px;
 }
 #search-bar{
-    font-size:.9rem;
+    font-size:16px;
     border-radius:0;
     border:1px solid rgb(228, 228, 228);
     float:left;
