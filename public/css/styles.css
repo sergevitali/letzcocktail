@@ -82,7 +82,22 @@ h5{
     margin:auto;
     font-size:18px;
 }
-
+/*-BACK TO TOP BUTTON-*/
+#myBtn {
+    display: none;
+    position: fixed;
+    right: 0px;
+    bottom: 50px;
+    z-index: 300;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(31, 31, 31);
+    opacity:.8;
+    color: white;
+    cursor: pointer;
+    padding: 3px 10px;
+  }
 /* FOOTER*/
 footer{
     background-color: #e5dfdf;
