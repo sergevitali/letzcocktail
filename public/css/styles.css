@@ -1,0 +1,111 @@
+html{
+    position:relative;
+    min-height:100vh;
+}
+body{
+    font-family: 'Titillium Web';
+    min-height:100vh;
+    margin-bottom:160px;
+}
+#search-bar{
+    font-size:.9rem;
+    border-radius:0;
+    border:1px solid rgb(228, 228, 228);
+    float:left;
+}
+input:focus, button:focus, input:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+a, a:hover {
+    color:rgb(56, 56, 56);
+    text-decoration: none;
+}
+#try-button{
+    font-weight: 700;
+    font-size:1.1rem;
+    color:rgb(170, 82, 82);
+    letter-spacing: .1rem;
+}
+.navbar-elements{
+    font-weight: 700;
+    color:rgb(48, 48, 48)!important;
+    font-size:14px;
+}
+
+#navbar{
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
+    background-color: #fff !important;
+}
+.navbar-toggler{
+    border:none;
+    padding:0;
+}
+.dropdown{
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.dropdown-content{
+    display:none;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 1;
+}
+.dropbtn {
+    cursor: pointer;
+}
+.dropdown-item:focus {
+    background-color: transparent !important;
+}
+
+.dropdown-menu{
+    margin:0;
+    border-radius:0;
+}
+.dropdown-toggle::after{
+    display:none;
+}
+
+.ingredient-list{
+    list-style: none;
+}
+h5{
+    font-weight: 700;
+    font-size:19px;
+    color:rgb(48, 48, 48)!important;
+}
+
+.ingredients-p{
+    width:220px;
+    margin:auto;
+    font-size:18px;
+}
+
+/* FOOTER*/
+footer{
+    background-color: #e5dfdf;
+    margin-bottom:0;
+    padding-bottom:10px;
+    padding-top:14px;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+}
+
+footer a{
+    font-size:15px;
+}
+footer p{
+    font-size:14px;
+}
+
+
+@media (min-width: 767.98px) {
+    .dropdown:hover .dropdown-content {
+        display:block;
+    }
+ }

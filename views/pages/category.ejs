@@ -1,0 +1,20 @@
+<%- include("../partials/header") %>
+
+<div class="container p-4">
+    <%- include("../partials/nav") %>
+    <p class="pt-4 text-center" style="width:250px; margin:auto; font-size:18px"> Here are the results for category <strong><%= param.toUpperCase() %></strong> </p>
+    <div class="text-center" id="coctails-section">
+        <p class="pt-4 text-center" id="noResults" style="display:none;">Oops, looks like there isn't anything like this</p>
+        <div class="row p-0">
+            <% drinks.forEach(drink=>{ %>
+                <div class="col-md-4 p-4 text-left mainElements">
+                    <a href="/drinks/<%= drink.id %>"><img src="<%= drink.img %>" class="img-fluid" alt="Responsive image"></a>
+                    <h5 class="pt-2 drinkName"><%= drink.name %></h5>
+                    <a href="/drinks/<%= drink.id %>"> Get Recipe </a>
+                </div>
+            <% }) %>                      
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

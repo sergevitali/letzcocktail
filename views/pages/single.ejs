@@ -1,0 +1,32 @@
+<%- include("../partials/header") %>
+
+<div class="container p-4">
+    <%- include("../partials/nav") %>
+    <div class="text-left mt-4">
+        <% drink.forEach(item=>{ %>  
+        <h3 class="pl-2"><%= item.name %></h3>
+        <p class="pl-2 mb-0"> <%= item.tag %></p>
+    </div>
+    <div class="text-center" id="coctails-section">
+        <div class="row pb-4">
+            <div class="col-md-6 p-4 text-left">
+                <img src="<%= item.img %>" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-md-6 p-4 text-left">
+                <h5>Ingredients</h5>
+                <ul class="pl-3">
+                    <% item.ings.map(item=>{ %>
+                         <% if(item.ing !== null && item.ing !== '') {%>
+                        <li class="ingredient-list">  <%= item.measure %> <%= item.ing %>  </li>
+                    <% }}) %>
+                </ul>
+                <h5>Instructions</h5>
+                <p> <%= item.instruction %> </p>
+                <a href="javascript:history.back()" style="color:rgb(170, 82, 82)">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <%  }) %>
+</div>
+
+<%- include("../partials/footer") %>
