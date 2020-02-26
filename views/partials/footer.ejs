@@ -36,6 +36,7 @@
         count=0;
         setTimeout(function(){
             $('.drinkName').map((i,ele)=>{
+                topFunction()
                 const element=$(ele).html().toLowerCase();
                 if(element.includes(value)){
                     $(ele).closest('div').show(1000);
