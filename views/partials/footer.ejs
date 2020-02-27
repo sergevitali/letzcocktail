@@ -29,44 +29,46 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
-    const message=document.getElementById('noResults');
-    const elements=$('.mainElements');
-    $('#search-bar').keyup(function(){
-        value=$(this).val().toLowerCase();
-        count=0;
-        setTimeout(function(){
-            $('.drinkName').map((i,ele)=>{
-                topFunction()
-                const element=$(ele).html().toLowerCase();
-                if(element.includes(value)){
-                    $(ele).closest('div').show(1000);
-                }else{
-                    $(ele).closest('div').hide(1000);
-                    count++;
-                }
+    const message = document.getElementById('noResults')
+    const elements = $('.mainElements')
+    $('#search-bar').keyup(function () {
+    value = $(this).val().toLowerCase()
+    count = 0
+    setTimeout(function () {
+            $('.drinkName').map((i, ele) => {
+            topFunction()
+            const element = $(ele).html().toLowerCase()
+            if (element.includes(value)) {
+                $(ele).closest('div').show(1000)
+            } else {
+                $(ele).closest('div').hide(1000)
+                count++
+            }
             })
-            if(count==elements.length){
-                message.style.display="block";
-            }else{
-                message.style.display="none";
+            if (count == elements.length) {
+            message.style.display = 'block'
+            } else {
+            message.style.display = 'none'
             }
         })
     })
+
     // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll=function (){
+    window.onscroll = function () {
         scrollFunction()
     }
-    function scrollFunction(){
-        if(document.body.scrollTop >20 || document.documentElement.scrollTop>20){
-        document.getElementById("myBtn").style.display="block";
-        }else{
-        document.getElementById("myBtn").style.display="none";
-        }
+    function scrollFunction () {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById('myBtn').style.display = 'block'
+    } else {
+        document.getElementById('myBtn').style.display = 'none'
     }
-    function topFunction() {
-    document.body.scrollTop=0;
-    document.documentElement.scrollTop=0;
     }
+    function topFunction () {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+    }
+
 </script>
 </body>
 </html>

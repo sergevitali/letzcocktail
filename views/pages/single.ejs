@@ -3,7 +3,7 @@
 <div class="container p-4">
     <%- include("../partials/nav") %>
     <div class="text-left mt-4">
-        <% drink.forEach(item=>{ %>  
+        <% drink.forEach(item => { %>  
         <h3 class="pl-2"><%= item.name %></h3>
         <p class="pl-2 mb-0"> <%= item.tag %></p>
     </div>
@@ -15,7 +15,7 @@
             <div class="col-md-6 p-4 text-left">
                 <h5>Ingredients</h5>
                 <ul class="pl-3">
-                    <% item.ings.map(item=>{ %>
+                    <% item.ings.map(item => { %>
                          <% if(item.ing !== null && item.ing !== '') {%>
                         <li class="ingredient-list">  <%= item.measure %> <%= item.ing %>  </li>
                     <% }}) %>
